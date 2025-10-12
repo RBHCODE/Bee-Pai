@@ -4,7 +4,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { Controller, FormProvider, useFormContext, useFormState } from "react-hook-form";
 
 import { cn } from "../../lib/utils";
-import { Label } from "../../components/ui/label"
+import { Label } from "./label"
 
 const Form = FormProvider
 
@@ -132,13 +132,5 @@ function FormMessage({
   );
 }
 
-export {
-  useFormField,
-  Form,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,
-  FormField,
-}
+export { Form, FormControl, FormField, FormItem, FormLabel, FormMessage };
+
