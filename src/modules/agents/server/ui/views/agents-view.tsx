@@ -10,23 +10,7 @@ import { ErrorState } from "../../../../../components/error-state";
 export const AgentsView = () =>{
     const trpc = useTRPC();
     const { data } = useSuspenseQuery(trpc.agents.getMany.queryOptions());
-   
-      // if(isLoading){
-      //   return (
-      //       <LoadingState 
-      //        title="Loading Agents"
-      //        description= "This  may take a few second"
-      //       />
-      //   )
-      // }
-      // if(isError){
-      //   return(
-      //       <ErrorState 
-      //        title="Error loading agents"
-      //        description= "Please try again later"
-      //       />
-      //   )
-      // }
+
   return (
     <div>
         {JSON.stringify(data, null, 2)}
