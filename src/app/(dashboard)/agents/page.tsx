@@ -9,11 +9,13 @@ import { Suspense } from "react";
 
 
 
+
 const page = async () => {
     const queryClient = getQueryClient();
     void queryClient.prefetchQuery(trpc.agents.getMany.queryOptions()); 
 
     return( 
+        
         <HydrationBoundary state={dehydrate(queryClient)}>
             <Suspense fallback={<AgentsViewLoading />}>
               <ErrorBoundary fallback={<AgentsViewError />}>
